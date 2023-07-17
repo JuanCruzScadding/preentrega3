@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Búsqueda de Películas</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+  <main>
+  <h1>Búsqueda de Películas</h1>
+
+  <div>
+    <label for="opcion-menu">Seleccione una opción:</label>
+    <select id="opcion-menu">
+      <option value="1">Buscar por título</option>
+      <option value="2">Buscar por año</option>
+      <option value="3">Buscar por género</option>
+    </select>
+  </div>
+
+  <div id="opcion-titulo" style="display: none;" class="input__container input__container--variant">
+    <label for="titulo-busqueda">Ingrese el título de una película:</label>
+    <input type="text" id="titulo-busqueda" class="input__search input__search--variant" placeholder="Ingrese el titulo">
+    <button id="buscar-titulo"  class="input__button__shadow input__button__shadow--variant"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="1.5em" width="13em">
+      <path d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z" fill-rule="evenodd" fill="#FFF"></path>
+    </svg></button>
+  </div>
+
+  <div id="opcion-anio" style="display: none;" class="input__container input__container--variant">
+    <label for="anio-busqueda">Ingrese el año de una película:</label>
+    <input type="text" id="anio-busqueda" class="input__search input__search--variant" placeholder="Ingrese el año">
+    <button id="buscar-anio" class="input__button__shadow input__button__shadow--variant"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="1.5em" width="13em">
+      <path d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z" fill-rule="evenodd" fill="#FFF"></path>
+    </svg></button>
+  </div>
+
+  <div id="opcion-genero" style="display: none;" class="input__container input__container--variant">
+    <label for="genero-busqueda">Ingrese el género de una película:</label>
+    <input type="text" id="genero-busqueda" class="input__search input__search--variant" placeholder="Ingrese el genero">
+    <button id="buscar-genero" class="input__button__shadow input__button__shadow--variant"><svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="1.5em" width="13em">
+      <path d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z" fill-rule="evenodd" fill="#FFF"></path>
+    </svg></button>
+  </div>
+  <div id="resultado"></div>
+  <div id="resultados"></div>
+<button id="verLista">
+  <span>Ver lista de peliculas</span>  
+</button>
+<div>
+    <ul id="lista" class="oculto"></ul>
+    <ul id="lista-peliculas"></ul>
+    <button onclick="vaciarLista()">Vaciar Lista</button>
+    <div id="formulario"></div>
+    <button id="amigo1">Enviar a Amigo</button>
+    <div class="notificaciones">
+      <button id="vaciarLista" class="oculto">Vaciar Lista</button>
+
+      <h2>NOTIFICACIONES</h2>
+      <div id="mensaje"></div>
+    </div>
+</div>
+</main>
+  <script src="proyecto/preEntrega3.js"></script>
+</body>
+</html>
